@@ -30,7 +30,9 @@ h4.subscription-success {
   font-weight: 200;
   background-color: rgba(93, 186, 98, 0.80);
   padding-bottom: 16px;
+  border-radius: 5px;
 }
+
 
 
 h4.subscription-error {
@@ -40,7 +42,9 @@ h4.subscription-error {
   font-weight: 200;
   background-color: rgba(226, 81, 68, 0.80);
   padding-bottom: 16px;
+  border-radius: 5px;
 }
+
 
 .btn-default {
 margin-left: 11px;
@@ -462,7 +466,7 @@ width: 130px;
     font-size: 22px;
   }
 img.storeIcon {
-width: 140px;
+width: initial;
 
   }
 
