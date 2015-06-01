@@ -70,6 +70,41 @@ line-height: 30px;
 }
 
 
+
+.mobileimage {
+  width: 100%;
+  height: 100%;
+}
+.fullscreen-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(/cover.png);
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+
+
+/*.YTPOverlay.raster {
+  background: url(/cover.png);
+}*/
+
+
+
+.pinkoverlay {
+  background-color: rgba(204, 0, 102, 0.53);
+  background: linear-gradient(rgba(204, 0, 102, 0),rgba(204, 0, 102, 0.84));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+
+
 .form-control {
 margin-top: 10px;
 padding: 12px 20px;

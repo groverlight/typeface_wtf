@@ -9,6 +9,9 @@ jQuery(window).load(function() {
 	jQuery(".preloader").delay(1000).fadeOut("slow");
 })
 
+
+
+
 /* =================================
 ===  RESPONSIVE VIDEO           ====
 =================================== */
@@ -35,11 +38,20 @@ function mailchimpCallback(resp) {
     }  
 }
 
+
+
+
+
 /* =================================
 ===  STICKY NAV                 ====
 =================================== */
 
 $(document).ready(function() {
+
+
+
+
+
   $('.main-navigation').onePageNav({
     scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
     filter: ':not(.external)',
