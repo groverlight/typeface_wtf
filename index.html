@@ -28,15 +28,17 @@
 
 
    <!-- Bootstrap -->
-   <!--  <link href="bootstrap/bootstrap.min.css" rel="stylesheet"> -->
+   <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     
+   
+   <!--Browser Unifier-->
+   <link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
    <!-- Overide -->
     <link rel="stylesheet" href="styles/main.css">
    <!--Animations-->
     <link rel="stylesheet" href="styles/animations.css">
-   <!--Browser Unifier-->
     <script src="js/prefixfree.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
   
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
@@ -63,6 +65,7 @@
     <a id="video" class="fullscreen-video player" data-property="{videoURL:'http://www.youtube.com/watch?v=kn-1D5z3-Cs'}">The Video</a>
   </div> -->
    <!-- Background image to display when the video doesn't play anymore -->
+   
   <div class="mobileimage">
     <div style="background-image: url(cover.png);" class="fullscreen-img"></div> 
     <div class="pinkoverlay"></div>
@@ -79,26 +82,9 @@
 
 
       <!-- SUBSCRIPTION FORM WITH TITLE -->
-        <div id = "object" class="subscription-form-container pulse">
-  
-        <!-- =====================
-               MAILCHIMP FORM STARTS 
-               ===================== -->
-          
-          <form class="subscription-form mailchimp form-inline wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" role="form">
-            
-            <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
-            <h4 class="subscription-success"></h4>
-            <h4 class="subscription-error"></h4>
-            
-            <!-- EMAIL INPUT BOX -->
-            <div class="subform"><input type="email" name="email" id="subscriber-email" placeholder="Enter your email" style="width:240px" class="form-control input-box">
-            
-            <!-- SUBSCRIBE BUTTON -->
-            <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Get Invite</button></div>
-            
-          </form>
-          <!-- /END MAILCHIMP FORM STARTS -->
+        <div id = "object" class="subscription-form-container text-center ">
+        <a href="http://www.apple.com" target="_blank" id="" class="btn btn-default standard-button">Download App</a>
+
           
           <!-- =====================
                LOCAL TXT FORM STARTS 
@@ -140,10 +126,6 @@
 
 <!--End mc_embed_signup-->
 
-      <div id="images" class="text-center">
-      <img src="IOS.png" alt="appStoreBadge" class="storeIcon">
-      <img src="Android.png" alt="appStoreBadge" class="storeIcon">
-      </div>
   
       </div>
   </div>
@@ -192,7 +174,21 @@
 
      <script>
   $(document).ready(function () {
+    var target = document.location.hash.replace("#", "");
+    
+    if (target.length) {
+        if(target=="terms"){
+          $('#terms').modal('show');
+          
+        }
+        else if(target=="privacy"){
+          $('#privacy').modal('show');
+         
 
+        }
+    }else{
+        
+    }
     var isMobile = false; //initiate as false
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -212,6 +208,11 @@ if(isMobile) {
 
 
 }
+
+    
+
+    
+
 
     $(".player").mb_YTPlayer();
 
@@ -261,39 +262,61 @@ function mailchimpCallback(resp) {
 
 // }
 
- </script>
 
-<span class="st_facebook_hcount" st_url="http://typeface.wtf" st_title="Add emotion, tone, and mood to you text messages to make sure you're never misunderstood again."></span>
-
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">
-        stLight.options({
-                publisher:'12345',
-        });
-
-</script>
-
-<span class="st_email_hcount" st_url="http://typeface.wtf" st_title="Add emotion, tone, and mood to you text messages to make sure you're never misunderstood again."></span>
-
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">
-        stLight.options({
-                publisher:'12345',
-
-        });
-        
-</script>
-
-<span class="st_twitter_hcount" st_url="http://typeface.wtf" st_title="Add emotion, tone, and mood to you text messages to make sure you're never misunderstood again."></span>
-
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">
-        stLight.options({
-                publisher:'@typeface',
-        });
 
         
 </script>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#terms" data-toggle="modal" data-target="#terms">Terms</a></li>
+        <li><a href="#Privacy" data-toggle="modal" data-target="#privacy">Privacy</a></li>
+        </li>
+      </ul>
+        </li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
+
+<!-- Modal -->
+<div class="modal fade" id="terms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Terms</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Privacy</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
